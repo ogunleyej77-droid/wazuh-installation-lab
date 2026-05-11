@@ -40,7 +40,7 @@ Document errors encountered and solutions used.
 Write what you learned during the lab.
 
 ## Screenshots
-Add screenshots of your setup and dashboard.
+<img width="1280" height="720" alt="fe8ec672-a273-4b77-b726-c92d86dac21e" src="https://github.com/user-attachments/assets/f7706a93-b940-4734-91cf-61ab034b76f9" />
 
 ## Troubleshooting
 Document errors encountered and solutions used.
