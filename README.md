@@ -1,55 +1,59 @@
-<img width="1280" height="720" alt="07ac0bca-c51e-47d9-94f0-4fd47f692ea3" src="https://github.com/user-attachments/assets/71cb2b79-8829-45e3-8ecd-882dc91a2b06" />
-<img width="1280" height="720" alt="61035bfc-4bf0-4375-9ad5-18b03e82dd19" src="https://github.com/user-attachments/assets/9887781a-8ded-4e9b-9e82-f4bd4bd3b23d" />
 # Wazuh Installation Lab
 
 ## Overview
-This repository documents my Wazuh SIEM installation and cybersecurity lab practice.
+This repository documents my Wazuh SIEM installation and cybersecurity lab practice using Wazuh VM (Wazuh v4.14.4 OVA) on VirtualBox.
 
 ## Objectives
-- Install Wazuh manager
+- Install Wazuh SIEM
 - Configure monitoring
-- Learn SIEM basics
+- Learn SIEM operations
 - Practice troubleshooting
 
 ## Tools Used
-- Wazuh
+- Wazuh v4.14.4 OVA
 - VirtualBox
+- Ubuntu Linux
 
 ## Installation Steps
-wazuh.# Wazuh Installation Lab
-
-## Overview
-This repository documents my Wazuh SIEM installation and cybersecurity lab practice.
-
-## Objectives
-- Install Wazuh manager
-- Configure monitoring
-- Learn SIEM basics
-- Practice troubleshooting
-
-## Tools Used
-- Wazuh
-- Ubuntu
-- VirtualBox
-
-## Installation Steps
-Document the commands and setup steps here.
+1. Downloaded the Wazuh OVA file
+2. Imported the OVA into VirtualBox
+3. Started the Wazuh VM
+4. Accessed the Wazuh dashboard
+5. Explored manager and indexer services
 
 ## Troubleshooting
-Document errors encountered and solutions used.
+
+### Issue
+wazuh-manager failed to start.
+
+### Error Check
+
+```bash
+sudo journalctl -xeu wazuh-manager
+sudo systemctl status wazuh-manager
+sudo systemctl status wazuh-indexer
+```
+
+### Cause
+- Configuration error in Wazuh VM settings
+- Wazuh indexer service was inactive
+- Wazuh manager service failed
+
+### Solution
+
+```bash
+sudo systemctl restart wazuh-manager
+sudo systemctl restart wazuh-indexer
+```
+
+Corrected the configuration issue and restarted the services successfully.
 
 ## Lessons Learned
-Write what you learned during the lab.
+- Learned basic SIEM operations
+- Improved Linux command-line skills
+- Understood how to troubleshoot Linux services
+- Learned how Wazuh monitoring works
 
 ## Screenshots
-<img width="1280" height="720" alt="07ac0bca-c51e-47d9-94f0-4fd47f692ea3" src="https://github.com/user-attachments/assets/71cb2b79-8829-45e3-8ecd-882dc91a2b06" />
-<img width="1280" height="720" alt="61035bfc-4bf0-4375-9ad5-18b03e82dd19" src="https://github.com/user-attachments/assets/9887781a-8ded-4e9b-9e82-f4bd4bd3b23d" /><img width="1280" height="720" alt="7953e3f2-ea9e-4abe-938c-cc5444b6bdf3" src="https://github.com/user-attachments/assets/5b39b3de-f4d6-4add-a40d-35a7df62c779" />
-
-## Troubleshooting
-Document errors encountered and solutions used.
-
-## Lessons Learned
-Write what you learned during the lab.
-
-## Screenshots
-Add screenshots of your setup and dashboard.
+<img width="1280" height="720" alt="61035bfc-4bf0-4375-9ad5-18b03e82dd19" src="https://github.com/user-attachments/assets/2fc58c5a-4201-47ef-9270-917bdcb3db7b" />
+<img width="1280" height="720" alt="7953e3f2-ea9e-4abe-938c-cc5444b6bdf3" src="https://github.com/user-attachments/assets/ca9e0a71-bd72-43eb-af41-bdb5737ee437" />
